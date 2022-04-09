@@ -60,22 +60,22 @@
    }
  }
 
- resource "aws_route_table_association" "PublicRTassociation" {
+ resource "aws_route_table_association_public_1" "PublicRTassociation" {
     subnet_id = aws_subnet.public_subnet_1.id
     route_table_id = aws_route_table.PublicRT.id
  }
 
-  resource "aws_route_table_association" "PublicRTassociation" {
+  resource "aws_route_table_association_public_2" "PublicRTassociation" {
     subnet_id = aws_subnet.public_subnet_2.id
     route_table_id = aws_route_table.PublicRT.id
  }
 
- resource "aws_route_table_association" "PrivateRTassociation" {
+ resource "aws_route_table_association_private_1" "PrivateRTassociation" {
     subnet_id = aws_subnet.private_subnet_1.id
     route_table_id = aws_route_table.PrivateRT.id
  }
 
- resource "aws_route_table_association" "PrivateRTassociation" {
+ resource "aws_route_table_association_private_2" "PrivateRTassociation" {
     subnet_id = aws_subnet.private_subnet_2.id
     route_table_id = aws_route_table.PrivateRT.id
  }
@@ -84,12 +84,12 @@
    vpc   = true
  }
 
- resource "aws_nat_gateway" "NATgw" {
+ resource "aws_nat_gateway_1" "NATgw" {
    allocation_id = aws_eip.nateIP.id
    subnet_id = aws_subnet.public_subnet_1.id
  }
 
- resource "aws_nat_gateway" "NATgw" {
+ resource "aws_nat_gateway_2" "NATgw" {
    allocation_id = aws_eip.nateIP.id
    subnet_id = aws_subnet.public_subnet_2.id
  }
