@@ -1,0 +1,5 @@
+main_vpc_cidr = "10.0.0.0/24"
+public_subnet_1 = "10.0.0.128/26"
+public_subnet_2 = "10.0.1.128/26"
+private_subnet_1 = "10.0.0.192/26"
+private_subnet_2 = "10.0.1.192/26"
