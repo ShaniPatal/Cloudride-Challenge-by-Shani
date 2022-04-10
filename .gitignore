@@ -2,3 +2,4 @@ venv
 terraform/vpc/.terraform.lock.hcl
 terraform/vpc/terraform.tfstate
 terraform/vpc/.terraform
+.idea
